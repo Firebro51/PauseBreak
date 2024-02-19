@@ -1,27 +1,30 @@
 .App {
   text-align: center;
+  min-height: 100vh; /* Make App fill the viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  margin: 0; /* Remove default margins */
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  animation: App-logo-spin infinite 20s linear;
 }
 
 .App-header {
+  width: 100%; /* Ensure the header is not wider than the viewport */
+  flex-grow: 1; /* Allow header to grow and fill available space */
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px; /* Adjust padding as needed */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
 .App-link {
@@ -35,4 +38,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-border-wrapper {
+  border-right: 30px solid #000;
+  border-left: 30px solid #000; 
+  border-bottom: 30px solid #000; 
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* This will prevent scrollbars */
+}
+
+/* Add this to prevent scrollbar caused by 100vh on mobile browsers when the URL bar hides/shows */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* This ensures your app stretches to the full height */
+  overflow: hidden; /* Prevents scrollbars */
 }

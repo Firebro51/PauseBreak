@@ -6,8 +6,9 @@ let mainWindow;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    // 16 by 10 aspect ratio looks good
+    width: 1400,
+    height: 875,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
@@ -15,6 +16,8 @@ function createWindow() {
     // Set the window title
     title: "PauseBreak",
   });
+
+  mainWindow.setMenu(null);
 
   const startUrl = isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`;
   mainWindow.loadURL(startUrl);
