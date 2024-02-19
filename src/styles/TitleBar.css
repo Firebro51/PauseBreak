@@ -1,0 +1,28 @@
+/* styles/TitleBar.css */
+
+.title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #282c34; /* The background color of the title bar */
+    color: white; /* Text color */
+    position: fixed; /* Position it fixed at the top */
+    top: 0; /* Align it to the top */
+    left: 0; /* Align it to the left side */
+    right: 0; /* Align it to the right side */
+    z-index: 1000; /* Make sure it's above other content */
+  }
+  
+  .title-bar-icon {
+    height: 30px; /* Fixed height for icons */
+    width: 30px; /* Fixed width for icons */
+    cursor: pointer; /* If the icons are clickable */
+    /* Adjust the sizes as needed */
+  }
+  
+  .title-bar-title {
+    
+    font-size: 1.5rem; /* Adjust the font size as needed */
+    margin: 0 10px; /* Adjust the margin as needed */
+  }
+  
