@@ -5,20 +5,9 @@
   flex-direction: column;
   justify-content: center; /* Center content vertically */
   margin: 0; /* Remove default margins */
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-  animation: App-logo-spin infinite 20s linear;
-}
-
-.App-header {
   width: 100%; /* Ensure the header is not wider than the viewport */
   flex-grow: 1; /* Allow header to grow and fill available space */
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
+  background-color: #0F1725;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -27,18 +16,7 @@
   box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .App-border-wrapper {
   border-right: 30px solid #000;
