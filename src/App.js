@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import TitleBar from './components/TitleBar';
+import React, { useState, useEffect } from 'react';
+import TopBar from './components/TopBar';
 import './App.css';
 
 function App() {
@@ -15,14 +15,16 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <TitleBar
-        title="Applications"
-        onPowerClick={handlePowerClick}
-        onThemeToggle={handleThemeToggle}
-        powerOn={powerOn}
-        darkMode={darkMode}
-      />
+    <div className="App-border-wrapper">
+        <div className="App">
+          <TopBar
+              title="Applications"
+              onPowerClick={handlePowerClick}
+              onThemeToggle={handleThemeToggle}
+              powerOn={powerOn}
+              darkMode={darkMode}
+            />
+      </div>
     </div>
   );
 }

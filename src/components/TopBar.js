@@ -1,11 +1,11 @@
 import React from 'react';
-import '../styles/TitleBar.css';
+import '../styles/TopBar.css';
 import PowerOnIcon from '../images/power-on-icon.svg';  // Path to power on icon
 import PowerOffIcon from '../images/power-off-icon.svg'; // Path to power off icon
 import SunIcon from '../images/sun-icon.svg';            // Path to sun icon (light mode)
 import MoonIcon from '../images/moon-icon.svg';          // Path to moon icon (dark mode)
 
-function TitleBar({ title, onPowerClick, onThemeToggle, powerOn, darkMode }) {
+function TopBar({ title, onPowerClick, onThemeToggle, powerOn, darkMode }) {
   return (
     <div className="title-bar">
       <img
@@ -25,4 +25,4 @@ function TitleBar({ title, onPowerClick, onThemeToggle, powerOn, darkMode }) {
   );
 }
 
-export default TitleBar;
+export default TopBar;

@@ -19,9 +19,9 @@
 
 
 .App-border-wrapper {
-  border-right: 30px solid #000;
-  border-left: 30px solid #000; 
-  border-bottom: 30px solid #000; 
+  border-right: 30px solid #080C13;
+  border-left: 30px solid #080C13; 
+  border-bottom: 30px solid #080C13; 
   box-sizing: border-box; /* Includes padding and border in the element's total width and height */
   height: 100%;
   width: 100%;
