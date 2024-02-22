@@ -1,5 +1,6 @@
 .window-controller{
     -webkit-app-region: drag; /* Make the title bar draggable */
+    font-family: 'Lato', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,8 +22,10 @@
 
   .window-controls {
     display: flex;
-    gap: 30px; /* Adjust the gap between buttons */
     margin-right: 18px;
+    align-items: center;
+    background-color: transparent; /* Default background color */
+    border-radius: 4px; /* Optional: if you want rounded corners */
   }
   
   .window-controls img {
@@ -31,8 +34,15 @@
     width: 16px; /* Adjusted the size to be visible */
     height: 16px; /* Adjusted the size to be visible */
     z-index: 1002;
+    align-items: center;
+    margin: 8px;
   }
-  
+
+  .window-controls img:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* On hover, use a semi-transparent white for light effect */
+  }
+
+
   /* Add styles for the buttons if needed */
   .minimize-btn, .maximize-btn, .close-btn {
     cursor: pointer;
@@ -40,4 +50,13 @@
     height: 50px;
     /* Add padding, size, background, etc. */
   }
+
+  .window-controller-left {
+    display: flex;
+    align-items: center;
+  }
   
+  .app-name {
+    font-size: 14px; /* Adjust font size as needed */
+    color: #E4E5E7; /* Adjust text color as needed */
+  }
