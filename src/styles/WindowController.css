@@ -1,4 +1,5 @@
 .window-controller{
+    -webkit-app-region: drag; /* Make the title bar draggable */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,6 +26,7 @@
   }
   
   .window-controls img {
+    -webkit-app-region: no-drag;
     cursor: pointer;
     width: 16px; /* Adjusted the size to be visible */
     height: 16px; /* Adjusted the size to be visible */

@@ -14,6 +14,7 @@ function createWindow() {
     // 16 by 10 aspect ratio looks good
     width: 1400,
     height: 875,
+    frame: false,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,
