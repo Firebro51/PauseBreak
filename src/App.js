@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TopBar from './components/TopBar';
+import WindowController from './components/WindowController';
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
   return (
     <div className="App-border-wrapper">
         <div className="App">
+          <WindowController />
           <TopBar
               title="Applications"
               onPowerClick={handlePowerClick}

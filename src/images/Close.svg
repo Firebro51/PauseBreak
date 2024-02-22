@@ -6,12 +6,12 @@
         fill: none;
         stroke: #fff;
         stroke-miterlimit: 10;
-        stroke-width: 2px;
+        stroke-width:5px;
       }
     </style>
   </defs>
   <g id="Layer_1-2" data-name="Layer 1">
-    <line class="cls-1" x1="1.73778" y1=".85435" x2="58.35128" y2="57.46784"/>
-    <line class="cls-1" x1="57.6887" y1=".70711" x2=".70711" y2="57.6887"/>
+    <line class="cls-1" x1="1.73778" y1=".85435" x2="48.35128" y2="47.46784"/>
+    <line class="cls-1" x1="47.6887" y1=".70711" x2=".70711" y2="47.6887"/>
   </g>
 </svg>

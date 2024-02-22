@@ -1,8 +1,13 @@
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, ipcMain } from 'electron';
 import path from 'path';
 import isDev from 'electron-is-dev';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
 let mainWindow;
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 function createWindow() {
   mainWindow = new BrowserWindow({
@@ -10,8 +15,9 @@ function createWindow() {
     width: 1400,
     height: 875,
     webPreferences: {
-      nodeIntegration: true,
-      contextIsolation: false,
+      preload: path.join(__dirname, 'preload.js'),
+      contextIsolation: true,
+      nodeIntegration: false,
     },
     // Set the window title
     title: "PauseBreak",
@@ -22,10 +28,16 @@ function createWindow() {
   const startUrl = isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`;
   mainWindow.loadURL(startUrl);
 
+  // Add IPC listeners for window control
+  ipcMain.on('window-minimize', () => mainWindow.minimize());
+  ipcMain.on('window-maximize', () => mainWindow.isMaximized() ? mainWindow.unmaximize() : mainWindow.maximize());
+  ipcMain.on('window-close', () => mainWindow.close());
+
   if (isDev) {
     mainWindow.webContents.openDevTools();
     waitForReactApp(mainWindow); // Add this line
   }
+
 }
 
 function waitForReactApp(window) {
