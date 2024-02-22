@@ -22,10 +22,7 @@
 
   .window-controls {
     display: flex;
-    margin-right: 18px;
     align-items: center;
-    background-color: transparent; /* Default background color */
-    border-radius: 4px; /* Optional: if you want rounded corners */
   }
   
   .window-controls img {
@@ -35,20 +32,27 @@
     height: 16px; /* Adjusted the size to be visible */
     z-index: 1002;
     align-items: center;
-    margin: 8px;
+    margin: 7px;
   }
 
-  .window-controls img:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* On hover, use a semi-transparent white for light effect */
+  .window-button {
+    -webkit-app-region: no-drag;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px; /* The clickable area margin */
+    padding-right: 15px; /* The clickable area margin */
+    border-radius: 1px; /* Optional: if you want rounded corners */
   }
 
-
-  /* Add styles for the buttons if needed */
-  .minimize-btn, .maximize-btn, .close-btn {
+  .window-button:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Hover effect */
+  }
+  
+  .window-button img {
     cursor: pointer;
-    width: 50px;
-    height: 50px;
-    /* Add padding, size, background, etc. */
+    width: 16px; /* Adjusted the size to be visible */
+    height: 16px; /* Adjusted the size to be visible */
   }
 
   .window-controller-left {

@@ -14,9 +14,15 @@ const WindowController = () => {
                 <span className="app-name">PauseBreak</span>
             </div>
             <div className="window-controls">
-                <img src={MinimizeIcon} alt="Minimize" className="minimize-btn" onClick={() => window.electronAPI.minimize()} />
-                <img src={MaximizeIcon} alt="Maximize" className="maximize-btn" onClick={() => window.electronAPI.maximize()} />
-                <img src={CloseIcon} alt="Close" className="close-btn" onClick={() => window.electronAPI.close()} />
+                <div className="window-button minimize-btn" onClick={() => window.electronAPI.minimize()}>
+                  <img src={MinimizeIcon} alt="Minimize" />
+                </div>
+                <div className="window-button maximize-btn" onClick={() => window.electronAPI.maximize()}>
+                  <img src={MaximizeIcon} alt="Maximize" />
+                </div>
+                <div className="window-button close-btn" onClick={() => window.electronAPI.close()}>
+                  <img src={CloseIcon} alt="Close" />
+                </div>
             </div>
         </div>
     );
