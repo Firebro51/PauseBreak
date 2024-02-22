@@ -23,6 +23,7 @@
   .window-controls {
     display: flex;
     align-items: center;
+    margin-right: 5px;
   }
   
   .window-controls img {
@@ -32,7 +33,7 @@
     height: 16px; /* Adjusted the size to be visible */
     z-index: 1002;
     align-items: center;
-    margin: 7px;
+    margin: 8.5px;
   }
 
   .window-button {
@@ -51,8 +52,8 @@
   
   .window-button img {
     cursor: pointer;
-    width: 16px; /* Adjusted the size to be visible */
-    height: 16px; /* Adjusted the size to be visible */
+    width: 12px; /* Adjusted the size to be visible */
+    height: 12px; /* Adjusted the size to be visible */
   }
 
   .window-controller-left {
