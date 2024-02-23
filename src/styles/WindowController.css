@@ -23,7 +23,6 @@
   .window-controls {
     display: flex;
     align-items: center;
-    margin-right: 5px;
   }
   
   .window-controls img {
@@ -33,7 +32,7 @@
     height: 16px; /* Adjusted the size to be visible */
     z-index: 1002;
     align-items: center;
-    margin: 8.5px;
+    margin: 9px;
   }
 
   .window-button {
@@ -46,8 +45,21 @@
     border-radius: 1px; /* Optional: if you want rounded corners */
   }
 
-  .window-button:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Hover effect */
+
+  .window-button:not(.close-btn):hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Light hover effect for minimize and maximize */
+  }
+
+  .close-btn:hover {
+    background-color: rgba(255, 0, 0, 0.9); /* Red hover effect for close */
+  }
+
+  .minimize-btn.clicked , .maximize-btn.clicked {
+    background-color: rgba(255, 255, 255, 0.2) !important; /* Adjust color and opacity as needed */
+  }
+
+  .close-btn.clicked {
+    background-color: rgba(255, 106, 106, 0.9) !important; /* Adjust color and opacity as needed */
   }
   
   .window-button img {
