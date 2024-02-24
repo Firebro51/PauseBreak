@@ -27,7 +27,6 @@
   
   .window-controls img {
     -webkit-app-region: no-drag;
-    cursor: pointer;
     width: 16px; /* Adjusted the size to be visible */
     height: 16px; /* Adjusted the size to be visible */
     z-index: 1002;
@@ -63,7 +62,6 @@
   }
   
   .window-button img {
-    cursor: pointer;
     width: 12px; /* Adjusted the size to be visible */
     height: 12px; /* Adjusted the size to be visible */
   }
