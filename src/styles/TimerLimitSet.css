@@ -1,0 +1,44 @@
+/* src/styles/Timer.css */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+.timer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  gap: 20px;
+}
+
+.timer-circle-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  width: 120px; /* This size should match the size of the circles */
+  height: 120px;
+}
+
+.timer-svg {
+  overflow: visible;
+  transform: rotate(-90deg);
+}
+
+.time-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: 'Lato', sans-serif; /* Lato font */
+  font-size: 16px; /* Fixed font size, adjust if needed to fit the circle */
+  text-align: center;
+}
+
+.timer-circle-container > svg > circle {
+  transform-origin: center;
+}
